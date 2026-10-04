@@ -1,0 +1,16 @@
+{
+  "name": "Sasha Portfolio",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [5500],
+  "portsAttributes": {
+    "5500": { "label": "Live Server", "onAutoForward": "openBrowser" }
+  }
+}
