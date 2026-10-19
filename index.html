@@ -14,7 +14,6 @@
     <nav class="links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -22,63 +21,138 @@
   <main id="top">
     <section class="hero">
       <h1>Hi, I'm Sasha.</h1>
-      <p class="tagline">Engineering student who likes building things that work. <!-- TODO: your major + school --></p>
+      <p class="tagline">2nd Year Mechanical Engineering student at Cal Poly SLO. <!-- TODO: your major + school --></p>
       <div class="buttons">
         <a href="#projects" class="btn">See my projects</a>
-        <a href="resume.pdf" class="btn btn-outline">Resume</a>
+        <a href="https://cpslo-my.sharepoint.com/personal/srana04_calpoly_edu/Documents/Sasha_Rana_Resume.pdf" class="btn btn-outline">Resume</a>
       </div>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>TODO: 2–3 sentences about you, what you study, and the kind of internship you're looking for.</p>
+      <p>I am a Mechanical Engineering student at Cal Poly concentrating in Mechatronics and pursuing a minor in Computer Science. I enjoy developing systems that combine mechanical design, electronics, and software, with a focus on rapid prototyping, hardware integration, and testing.</p>
       <ul class="skills">
-        <li>Python</li><li>C/C++</li><li>CAD</li><li>MATLAB</li><li>Git</li>
+        <li>Python</li><li>C/C++</li><li>CAD</li><li>MATLAB</li><li>Git</li><li>CNC/Lathe</li><li>PCB Fabrication</li>
       </ul>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>What it is, what you built, and the result (numbers help!).</p>
-          <p class="tags">Python · Arduino</p>
-          <a href="#">Learn more &rarr;</a>
+        <article class="card project-featured">
+          <div class="carousel">
+            <div class="carousel-track" tabindex="0" aria-label="Enclosure images, use arrow keys or swipe">
+              <figure><img src="images/case-01-exploded.png" alt="Exploded view of the lid, PCB and base"><figcaption>Exploded assembly: lid, PCB and base</figcaption></figure>
+              <figure><img src="images/case-02-assembled.png" alt="Assembled enclosure" loading="lazy"><figcaption>Assembled enclosure</figcaption></figure>
+              <figure><img src="images/case-03-ports.png" alt="Enclosure side with USB-C and access holes" loading="lazy"><figcaption>Port side: USB-C and access holes</figcaption></figure>
+              <figure><img src="images/case-04-lid.png" alt="Lid with Class-A top surface" loading="lazy"><figcaption>Lid</figcaption></figure>
+              <figure><img src="images/case-05-lid-underside.png" alt="Underside of the lid" loading="lazy"><figcaption>Lid underside</figcaption></figure>
+              <figure><img src="images/case-06-base-inside.png" alt="Base interior with PCB standoffs" loading="lazy"><figcaption>Base interior with PCB standoffs</figcaption></figure>
+              <figure><img src="images/case-07-base-underside.png" alt="Base underside with magnet recess" loading="lazy"><figcaption>Base underside with magnet recess</figcaption></figure>
+              <figure><img src="images/case-08-pcb.png" alt="PCB model built from Gerber and pick-and-place data" loading="lazy"><figcaption>PCB model from Gerber / pick-and-place data</figcaption></figure>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="project-text">
+            <h3>Wearable Voice-Recorder Enclosure</h3>
+            <p>3D-printed two-part case for a 6-layer wearable recorder PCB, taken from CAD through printed prototypes across two board generations.</p>
+            <p><strong>The fit problem:</strong> First prints didn't seat. I measured the cavity, found the clearance was under-allocated for FDM shrinkage, and re-budgeted it from 0.4 to 1.2 mm per side. The parts now close.</p>
+            <details>
+              <summary>Details</summary>
+              <ul>
+                <li>Reverse-engineered component placement from Gerber, Excellon and pick-and-place files</li>
+                <li>Designed for manufacturability: parting line oriented for layer-adhesion strength, draft, uniform 1.5 mm walls</li>
+                <li>Integrated an FR-4 board, NdFeB magnet, Li battery and USB-C port</li>
+                <li>Class-A surfacing for a premium finish</li>
+              </ul>
+              <p class="specs">Board 30.18 &times; 40.39 &times; 1.3 mm, 6 layers &middot; Case ~35 &times; 46 &times; 19.5 mm &middot; Wall 1.5 mm</p>
+            </details>
+            <p class="tags">CAD &middot; 3D printing &middot; DFM &middot; PCB integration</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Problem, your approach, and the outcome.</p>
-          <p class="tags">SolidWorks · 3D printing</p>
-          <a href="#">Learn more &rarr;</a>
+
+        <article class="card project-featured project-race">
+          <div class="carousel">
+            <div class="carousel-track" tabindex="0" aria-label="Harness anchorage images, use arrow keys or swipe">
+              <figure><img src="images/race-01-exploded.png" alt="Exploded view of the lower harness anchorage: eyebolt, spreader, bushing and syntactic annulus, monocoque floor, backing plate and locknut"><figcaption>Exploded stack-up through the monocoque floor</figcaption></figure>
+              <figure><img src="images/race-02-two-mount.png" alt="Two eyebolt anchorages on a floor panel at 150 mm centres" loading="lazy"><figcaption>Two-mount layout at 150 mm centres</figcaption></figure>
+              <figure><img src="images/race-03-machined-parts.png" alt="Machined spreader, insert bushing and backing plate in 7050-T7451" loading="lazy"><figcaption>Machined parts: 34 g + 13 g + 19 g per mount</figcaption></figure>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="project-text">
+
+          <h3>Formula SAE Harness Anchorage (Composite Chassis)</h3>
+            <p>Designed and hand-analyzed the lower harness mounts (machined spreader, bonded insert and eyebolt) for a carbon monocoque, from FSAE rules to a release-ready model.</p>
+            <p><strong>Key finding:</strong> A &minus;0.20 margin that looked like a failed design was the wrong limit. Pin-in-hole loads need MMPDS <em>bearing</em> values, not tensile ones. Rechecked, the margin was positive.</p>
+            <ul class="highlights">
+              <li><strong>Zero prying:</strong> put the load line on the bolt axis, removing 450 N&middot;m from the joint</li>
+              <li><strong>~1.2 kg saved</strong> by finding the real mass drivers. The insert alone went from 76 g to 29 g.</li>
+              <li><strong>Rules drove geometry:</strong> edge distance, not strength, set the &Oslash;55 size</li>
+            </ul>
+            <details>
+              <summary>Details</summary>
+              <ul>
+                <li>Checked net tension, bearing and shear-out on every load path using MMPDS bearing allowables (F<sub>bru</sub> &asymp; 1.8 F<sub>tu</sub>)</li>
+                <li>Designed bolted joints for bearing, not friction (preload slip ~10 kN vs 33 kN required)</li>
+                <li>Chose 7050-T7451 for corrosion resistance and syntactic foam core, since honeycomb (&lt;1 MPa) couldn't take 6.72 MPa</li>
+                <li>Isolated carbon from aluminium to prevent galvanic corrosion</li>
+                <li>Aligned the service load with the certified test direction (F.7.9.2.b)</li>
+              </ul>
+            </details>
+
+
+          <p class="tags">Structural analysis &middot; MMPDS &middot; Composites &middot; Bolted joints &middot; DFM</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>Team project? Say what your role was.</p>
-          <p class="tags">C++ · Robotics</p>
-          <a href="#">Learn more &rarr;</a>
+
+        <article class="card project-featured">
+          <div class="carousel">
+            <div class="carousel-track" tabindex="0" aria-label="Robot elevator images, use arrow keys or swipe">
+              <figure><img src="images/robot-01-cad.png" alt="Onshape CAD model of the multi-stage elevator lift with two V5 motors"><figcaption>Onshape model of the elevator lift</figcaption></figure>
+              <figure><img src="images/robot-02-prototype.png" alt="Physical prototype of the elevator with string and pulleys on the build table" loading="lazy"><figcaption>Built prototype: string-and-pulley rigging</figcaption></figure>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="project-text">
+            <h3>VEX U Robotics: Elevator Lift</h3>
+            <p>On our VEX U team, every mechanism goes from an Onshape model to a physical prototype to code. We design in CAD, build from the model, test, and feed what we learn back into the design.</p>
+            <p><strong>Example, the elevator:</strong> a multi-stage, string-driven lift powered by two V5 motors. I modeled the stages, pulleys and motor mount in Onshape to check fit, clearances and string routing before building, then built and tested the prototype.</p>
+            <ul class="highlights">
+              <li><strong>CAD first:</strong> caught fit and clearance problems in Onshape instead of in metal</li>
+              <li><strong>Prototype and iterate:</strong> built from the model, tested it, and updated the CAD with the fixes</li>
+              <li><strong>Programming:</strong> wrote the robot code in VEX's VS Code extension to control the lift and other mechanisms</li>
+            </ul>
+            <details>
+              <summary>Details</summary>
+              <ul>
+                <li>Pulley rigging: routing string so all stages extend together, and managing tension and slack</li>
+                <li>Designing around a fixed parts kit: C-channel, shafts, bearings and motor mounts</li>
+                <li>Shared Onshape models so teammates could design connecting mechanisms in parallel</li>
+              </ul>
+            </details>
+            <p class="tags">Onshape &middot; Prototyping &middot; Mechanisms &middot; VEX V5 &middot; Programming</p>
+          </div>
         </article>
+
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="item">
-          <h3>Role · Organization</h3>
-          <p class="date">Month Year – Present</p>
-          <p>What you did and what changed because of it.</p>
-        </div>
-      </div>
-    </section>
+  
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Open to internship opportunities. Let's talk!</p>
       <p class="contact-links">
-        <a href="mailto:you@example.com">Email</a>
-        <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
-        <a href="https://github.com/sasha-rana">GitHub</a>
+        <a href="mailto:sasha.rana.la@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/sasha-rana-9aaab3236" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sasha-rana" target="_blank" rel="noopener">GitHub</a>
       </p>
     </section>
   </main>
