@@ -95,6 +95,45 @@
           </div>
         </article>
 
+        <article class="card project-featured project-cura">
+          <div class="carousel">
+            <div class="carousel-track" tabindex="0" aria-label="Cura Algorithm Explorer screenshots on the recorder enclosure, use arrow keys or swipe">
+              <figure><img src="images/cura-01-overview-arachne.png" alt="Cura Algorithm Explorer slicing case_bottom.stl with Arachne variable-width walls, medial-axis skeleton, Gyroid infill and live executable pseudocode"><figcaption>Slicing <code>case_bottom.stl</code>: Arachne walls, medial-axis skeleton &amp; Gyroid infill</figcaption></figure>
+              <figure><img src="images/cura-02-3d-slice-view.png" alt="3D perspective mesh view of case_bottom.stl with active layer extrusion ribbons" loading="lazy"><figcaption>3D mesh view with extruded toolpath ribbons at layer 6 / 42</figcaption></figure>
+              <figure><img src="images/cura-03-step-medial-axis.png" alt="Step S3 checkpoint isolating the Delaunay medial-axis skeleton on case_bottom.stl and highlighting lines 13 to 18 of the stage pseudocode" loading="lazy"><figcaption>Step S3 checkpoint: isolating the 6,892-node medial-axis skeleton on the case wall</figcaption></figure>
+              <figure><img src="images/cura-04-deep-dive-walkthrough.png" alt="Expanded first-principles visual walkthrough showing live clearance circles and zoomable SVG diagrams for case_bottom.stl" loading="lazy"><figcaption>Shape-contextual walkthrough: live clearance circles (0.06&ndash;3.13 mm) with pan &amp; zoom</figcaption></figure>
+              <figure><img src="images/cura-05-compare-constant-vs-arachne.png" alt="Side-by-side comparison of Constant-Width vs. Arachne Variable-Width walls on case_bottom.stl" loading="lazy"><figcaption>Side-by-side compare: Constant-width offsets vs. Arachne medial-axis beading</figcaption></figure>
+              <figure><img src="images/cura-06-infill-and-combing.png" alt="Combing travel path planning and retraction analysis across the recorder enclosure base" loading="lazy"><figcaption>Stage 6 path planning: boundary-combed interior travels vs. open-air retractions</figcaption></figure>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
+            <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
+            <div class="carousel-dots"></div>
+          </div>
+          <div class="project-text">
+            <h3>Cura Algorithm Explorer</h3>
+            <p>Interactive web workbench that opens up the black box of 3D-printer slicing &mdash; from STL triangle-plane intersection to Arachne variable-width walls, TPMS gyroid infill, and combed travel routing &mdash; shown above slicing the wearable voice-recorder enclosure (<code>case_bottom.stl</code>).</p>
+            <p><strong>Why I built it:</strong> While tuning thin walls and snap-fit clearances on the recorder case, I wanted to see <em>why</em> the slicer dropped inner perimeters or left under-extruded gaps. Instead of static diagrams, every pipeline stage runs live, editable pseudocode whose intermediate steps (<code>S1..Sn</code>) map directly to canvas geometry.</p>
+            <ul class="highlights">
+              <li><strong>Executable pseudocode:</strong> edit &amp; step through each stage's algorithm line-by-line while driving the live layer toolpaths</li>
+              <li><strong>Arachne medial axis:</strong> boundary sampling + Delaunay circumcentre Voronoi graph + leaf pruning for adaptive bead widths</li>
+              <li><strong>Shape-contextual deep dives:</strong> first-principles walkthroughs with pan/zoom SVG diagrams generated from the active part</li>
+            </ul>
+            <details>
+              <summary>Details</summary>
+              <ul>
+                <li>6-stage pipeline in integer microns (1000 &mu;m = 1 mm, matching CuraEngine): STL slicing, Clipper2 polygon offsetting, Constant vs. Arachne walls, 7 infill patterns (including Marching Squares Gyroid), 2-opt path ordering, and boundary-combed travels</li>
+                <li>Side-by-side Compare view and real-time virtual nozzle animation with extrusion length, gap area, retraction count, and print-time metrics</li>
+                <li>Built with TypeScript, React 19, HTML5 Canvas 2D, Three.js (3D ribbon view), Clipper2 WASM, and d3-delaunay</li>
+              </ul>
+              <p class="specs">
+                <a href="https://sasha-rana.github.io/cura-explorer/" target="_blank" rel="noopener"><strong>Live App &rarr;</strong></a> &nbsp;&middot;&nbsp;
+                <a href="https://github.com/sasha-rana/cura-explorer" target="_blank" rel="noopener">GitHub Repo</a>
+              </p>
+            </details>
+            <p class="tags">Computational geometry &middot; 3D printing &middot; TypeScript &middot; Three.js &middot; Clipper2</p>
+          </div>
+        </article>
+
         <article class="card project-featured project-race">
           <div class="carousel">
             <div class="carousel-track" tabindex="0" aria-label="Harness anchorage images, use arrow keys or swipe">

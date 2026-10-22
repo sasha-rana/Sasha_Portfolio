@@ -115,8 +115,10 @@ details summary { cursor: pointer; color: var(--accent); margin-bottom: 0.6rem; 
 .highlights li { border-left: 3px solid var(--accent); padding-left: 0.8rem; }
 @media (min-width: 760px) { .highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-/* Harness project carousel */
+/* Harness & Cura project carousels */
 .project-race .carousel-track { background: #eef1f0; }
+.project-cura .carousel-track { background: #16181d; border: 1px solid #2a303c; }
+.project-cura .carousel-track figcaption { color: #cbd5e1; padding-top: 0.4rem; }
 .project-featured .highlights { grid-template-columns: 1fr; }
 
 /* Tighter gap between intro and About */
