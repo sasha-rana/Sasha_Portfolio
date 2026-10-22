@@ -111,6 +111,10 @@
           </div>
           <div class="project-text">
             <h3>Cura Algorithm Explorer</h3>
+            <p class="project-links">
+              <a href="https://sasha-rana.github.io/cura-explorer/" target="_blank" rel="noopener" class="btn btn-sm">Live App &rarr;</a>
+              <a href="https://github.com/sasha-rana/cura-explorer" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub Repo</a>
+            </p>
             <p>Interactive web workbench that opens up the black box of 3D-printer slicing &mdash; from STL triangle-plane intersection to Arachne variable-width walls, TPMS gyroid infill, and combed travel routing &mdash; shown above slicing the wearable voice-recorder enclosure (<code>case_bottom.stl</code>).</p>
             <p><strong>Why I built it:</strong> While tuning thin walls and snap-fit clearances on the recorder case, I wanted to see <em>why</em> the slicer dropped inner perimeters or left under-extruded gaps. Instead of static diagrams, every pipeline stage runs live, editable pseudocode whose intermediate steps (<code>S1..Sn</code>) map directly to canvas geometry.</p>
             <ul class="highlights">
@@ -125,10 +129,6 @@
                 <li>Side-by-side Compare view and real-time virtual nozzle animation with extrusion length, gap area, retraction count, and print-time metrics</li>
                 <li>Built with TypeScript, React 19, HTML5 Canvas 2D, Three.js (3D ribbon view), Clipper2 WASM, and d3-delaunay</li>
               </ul>
-              <p class="specs">
-                <a href="https://sasha-rana.github.io/cura-explorer/" target="_blank" rel="noopener"><strong>Live App &rarr;</strong></a> &nbsp;&middot;&nbsp;
-                <a href="https://github.com/sasha-rana/cura-explorer" target="_blank" rel="noopener">GitHub Repo</a>
-              </p>
             </details>
             <p class="tags">Computational geometry &middot; 3D printing &middot; TypeScript &middot; Three.js &middot; Clipper2</p>
           </div>
@@ -140,6 +140,11 @@
               <figure><img src="images/race-01-exploded.png" alt="Exploded view of the lower harness anchorage: eyebolt, spreader, bushing and syntactic annulus, monocoque floor, backing plate and locknut"><figcaption>Exploded stack-up through the monocoque floor</figcaption></figure>
               <figure><img src="images/race-02-two-mount.png" alt="Two eyebolt anchorages on a floor panel at 150 mm centres" loading="lazy"><figcaption>Two-mount layout at 150 mm centres</figcaption></figure>
               <figure><img src="images/race-03-machined-parts.png" alt="Machined spreader, insert bushing and backing plate in 7050-T7451" loading="lazy"><figcaption>Machined parts: 34 g + 13 g + 19 g per mount</figcaption></figure>
+              <figure><img src="images/race-04-viewer-load-path.png" alt="Interactive 3D viewer showing force vectors at the 15 kN rule test: belt, bolt tension, nut, backing plate and punch-through" loading="lazy"><figcaption>Interactive viewer: load path at the 15 kN rule test</figcaption></figure>
+              <figure><img src="images/race-05-viewer-preload.png" alt="Viewer at 0% belt load: the 8 kN bolt preload clamps the spreader and backing plate" loading="lazy"><figcaption>Before the belt pulls: 8 kN preload clamps the stack</figcaption></figure>
+              <figure><img src="images/race-06-viewer-free-body.png" alt="Free-body diagram of the backing plate with per-pad contact forces from the nut and the panel" loading="lazy"><figcaption>Free-body diagram of the backing plate, per-pad contact forces</figcaption></figure>
+              <figure><img src="images/race-07-viewer-section.png" alt="Section view through the mount: eyebolt, spreader, bushing, syntactic annulus and backing plate in the panel" loading="lazy"><figcaption>Section through the mount and panel</figcaption></figure>
+              <figure><img src="images/race-08-viewer-off-axis.png" alt="Safety-factor colouring for a 30 degree off-axis belt pull, with the eyebolts shown red" loading="lazy"><figcaption>A 30&deg; off-axis pull turns the eyebolt red: why the load line stays on the bolt axis</figcaption></figure>
             </div>
             <button class="carousel-btn prev" aria-label="Previous image">&#8249;</button>
             <button class="carousel-btn next" aria-label="Next image">&#8250;</button>
@@ -148,7 +153,12 @@
           <div class="project-text">
 
           <h3>Formula SAE Harness Anchorage (Composite Chassis)</h3>
+            <p class="project-links">
+              <a href="https://sasha-rana.github.io/belt-mount-sim/" target="_blank" rel="noopener" class="btn btn-sm">Live 3D Viewer &rarr;</a>
+              <a href="https://github.com/sasha-rana/belt-mount-sim" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub Repo</a>
+            </p>
             <p>Designed and hand-analyzed the lower harness mounts (machined spreader, bonded insert and eyebolt) for a carbon monocoque, from FSAE rules to a release-ready model.</p>
+            <p><strong>Interactive model:</strong> I modelled the mount in FreeCAD and simulated the pull test in MuJoCo. In the <a href="https://sasha-rana.github.io/belt-mount-sim/" target="_blank" rel="noopener">3D viewer</a> you can rotate, explode and section the assembly, ramp the belt load, and watch the forces move through each part.</p>
             <p><strong>Key finding:</strong> A &minus;0.20 margin that looked like a failed design was the wrong limit. Pin-in-hole loads need MMPDS <em>bearing</em> values, not tensile ones. Rechecked, the margin was positive.</p>
             <ul class="highlights">
               <li><strong>Zero prying:</strong> put the load line on the bolt axis, removing 450 N&middot;m from the joint</li>

@@ -124,3 +124,7 @@ details summary { cursor: pointer; color: var(--accent); margin-bottom: 0.6rem; 
 /* Tighter gap between intro and About */
 .hero { min-height: 55vh; padding-bottom: 1.5rem; }
 #about { padding-top: 1.5rem; }
+
+/* Project links, shown up front under each title */
+.project-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.2rem 0 1rem; }
+.btn-sm { padding: 0.4rem 0.9rem; font-size: 0.9rem; border-width: 1.5px; }
